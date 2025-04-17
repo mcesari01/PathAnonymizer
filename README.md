@@ -10,7 +10,7 @@ It automatically replaces occurrences like:
 
 with:
 
-/Users/"<yourname>"/Desktop/file.txt
+/Users/"yourname"/Desktop/file.txt
 
 
 ---
