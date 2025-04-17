@@ -11,24 +11,19 @@ class PathConverterApp:
         self.root.title("Pathname Anonymizer")
         self.root.geometry("600x200")
 
-        # Get current username
         self.username = getpass.getuser()
 
-        # Create and pack main frame
         self.frame = ttk.Frame(self.root, padding="10")
         self.frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
-        # Input path label and textbox
         ttk.Label(self.frame, text="Input Path:").grid(row=0, column=0, sticky=tk.W, pady=5)
         self.input_path = ttk.Entry(self.frame, width=60)
         self.input_path.grid(row=1, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=5)
 
-        # Output path label and textbox
         ttk.Label(self.frame, text="Anonymized Text:").grid(row=2, column=0, sticky=tk.W, pady=5)
         self.output_path = ttk.Entry(self.frame, width=60)
         self.output_path.grid(row=3, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=5)
 
-        # Buttons
         ttk.Button(self.frame, text="Anonymize", command=self.convert_path).grid(row=4, column=0, pady=10)
         ttk.Button(self.frame, text="Copy to Clipboard", command=self.copy_to_clipboard).grid(row=4, column=1, pady=10)
 
