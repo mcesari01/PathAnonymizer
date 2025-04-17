@@ -5,7 +5,7 @@ import getpass
 import pyperclip
 
 
-class PathConverterApp:
+class PathAnonymizer:
     def __init__(self, root):
         self.root = root
         self.root.title("Pathname Anonymizer")
@@ -62,7 +62,7 @@ class PathConverterApp:
 
 def main():
     root = tk.Tk()
-    app = PathConverterApp(root)
+    app = PathAnonymizer(root)
     root.mainloop()
 
 if __name__ == "__main__":
